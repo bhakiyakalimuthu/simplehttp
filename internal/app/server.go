@@ -106,6 +106,7 @@ func HelloJS(w http.ResponseWriter,r *http.Request, _ httprouter.Params){
 	}
 }
 
+// ServerGorilla using gorilla mux
 type ServerGorilla struct{}
 
 func(s *ServerGorilla)RouteGorilla(){
