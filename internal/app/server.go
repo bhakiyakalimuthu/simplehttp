@@ -3,6 +3,7 @@ package app
 import (
 	"github.com/go-chi/chi"
 	"github.com/julienschmidt/httprouter"
+	"github.com/gorilla/mux"
 	"log"
 	"net/http"
 )
@@ -104,3 +105,35 @@ func HelloJS(w http.ResponseWriter,r *http.Request, _ httprouter.Params){
 		w.WriteHeader(http.StatusInternalServerError)
 	}
 }
+
+type ServerGorilla struct{}
+
+func(s *ServerGorilla)RouteGorilla(){
+	handler := mux.NewRouter()
+	handler.HandleFunc("/hello",HelloGorilla)
+	log.Fatal(http.ListenAndServe(":8080", handler))
+}
+
+func HelloGorilla(w http.ResponseWriter,_ *http.Request){
+	w.WriteHeader(http.StatusOK)
+	_,err := w.Write([]byte(`Hello server gorilla mux`))
+	if err!=nil{
+		w.WriteHeader(http.StatusInternalServerError)
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
