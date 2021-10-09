@@ -6,6 +6,6 @@ SimpleHttp contains implementation of Http server using different http routers i
 * http.HandlerFunc (cmd/s3/main.go)
 * http.ServeMux  (cmd/mux/main.go)
 * go-chi/chi (cmd/chi/main.go)
-* julienschmidt/httprouter (cmd/s3/main.go) 
+* julienschmidt/httprouter (cmd/js/main.go) 
 
 ****
