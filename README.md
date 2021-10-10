@@ -1,4 +1,4 @@
-SimpleHttp contains implementation of Http server using different http routers in  Go
+# SimpleHttp contains implementation of Http server using different http routers in  Go
 ***
 
 * http.HandleFunc (cmd/s1/main.go)
